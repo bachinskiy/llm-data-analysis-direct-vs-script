@@ -1,0 +1,61 @@
+{
+  "transformation": {
+    "source": "script_vs_context_benchmark\\results\\e2-n1000-generated-transform-m3-2026-09-29T16-29-07-222Z\\codex.jsonl",
+    "selection": "One turn.completed event, other log content omitted",
+    "record": {
+      "type": "turn.completed",
+      "usage": {
+        "input_tokens": 16778,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1366,
+        "reasoning_output_tokens": 688
+      }
+    },
+    "usage": {
+      "input_tokens": 16778,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1366,
+      "reasoning_output_tokens": 688
+    }
+  },
+  "interpretation": {
+    "source": "script_vs_context_benchmark/results/e2-n1000-generated-transform-m3-2026-09-29T16-29-07-222Z/interpretation.metrics.json",
+    "selection": "Archived CLI usage record or saved metrics; not full log",
+    "record": {
+      "experiment_id": "e2-n1000-interpret",
+      "method": "M3",
+      "model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "turn_id": null,
+      "pricing_snapshot": "2026-09-18",
+      "usage": {
+        "input_tokens": 19165,
+        "cached_input_tokens": 12032,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 223,
+        "reasoning_output_tokens": 106,
+        "total_tokens": 19388
+      },
+      "uncached_input_tokens": 7133,
+      "cache_ratio": 0.627811,
+      "observed_wall_time_ms": 8800,
+      "tool_calls": 0,
+      "sql_calls": 0,
+      "sql_failed_calls": 0,
+      "api_usd_at_list_price": 0.0193484,
+      "codex_credits_equivalent": 0.48371,
+      "subscription_allowance": "Shared ChatGPT Codex allowance; per-task cash charge is not inferred.",
+      "warnings": []
+    },
+    "usage": {
+      "input_tokens": 19165,
+      "cached_input_tokens": 12032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 223,
+      "reasoning_output_tokens": 106,
+      "total_tokens": 19388
+    }
+  }
+}

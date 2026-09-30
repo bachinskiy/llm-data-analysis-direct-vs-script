@@ -1,0 +1,5 @@
+- Main-track critical groups had the largest displayed damage sums, including $35,472,018 in 2020 and $31,302,804 in 2021; their row counts were 13 and 16, respectively.  
+- Yard medium groups contained comparatively many rows each year (88 in 2018, 92 in 2019, 75 in 2020, 67 in 2021, and 65 in 2022), with damage sums below those shown for main-track critical groups.  
+- Nonzero injury and hazmat sums appear only in selected critical groups. For example, 2021 Main critical shows 3 injured and 4 hazmat, while 2018 Main critical shows 3 hazmat.  
+
+**Limitations:** These describe only the 1,000 stored rows selected by ascending raw_id, not a population or exposure-adjusted rate. Severity reflects prescribed parsing and threshold rules, not an independently validated safety assessment. Grouped rows do not establish unique incidents or causes.

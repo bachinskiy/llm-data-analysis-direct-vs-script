@@ -1,0 +1,17 @@
+{
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": "high",
+  "method": "M4",
+  "mode": "script",
+  "transformation": {
+    "usage": {
+      "input_tokens": 353,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 814,
+      "reasoning_output_tokens": 250,
+      "total_tokens": 1167
+    },
+    "usd": 0.010474
+  }
+}

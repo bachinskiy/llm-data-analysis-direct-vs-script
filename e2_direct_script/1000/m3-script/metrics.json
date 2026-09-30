@@ -1,0 +1,28 @@
+{
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": "high",
+  "method": "M3",
+  "mode": "script",
+  "transformation": {
+    "usage": {
+      "input_tokens": 16778,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1366,
+      "reasoning_output_tokens": 688,
+      "total_tokens": 18144
+    },
+    "usd": 0.049948
+  },
+  "interpretation": {
+    "usage": {
+      "input_tokens": 19165,
+      "cached_input_tokens": 12032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 223,
+      "reasoning_output_tokens": 106,
+      "total_tokens": 19388
+    },
+    "usd": 0.0193484
+  }
+}

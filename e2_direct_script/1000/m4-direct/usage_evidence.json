@@ -1,0 +1,70 @@
+{
+  "transformation": {
+    "source": "script_vs_context_benchmark/results/e2-n1000-direct-m4-2026-09-29T16-30-10-326Z/response.raw.json",
+    "selection": "Provider response identifiers and usage; other fields omitted",
+    "record": {
+      "id": "resp_0362fa21ceb2d12e006abbe7929f6087d2ac129e53f55f678e",
+      "model": "gpt-5.6-terra",
+      "status": "completed",
+      "created_at": 1790699410,
+      "usage": {
+        "input_tokens": 38741,
+        "input_tokens_details": {
+          "cache_write_tokens": 38738,
+          "cached_tokens": 0
+        },
+        "output_tokens": 17398,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 56139
+      }
+    },
+    "usage": {
+      "input_tokens": 38741,
+      "input_tokens_details": {
+        "cache_write_tokens": 38738,
+        "cached_tokens": 0
+      },
+      "output_tokens": 17398,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 56139
+    }
+  },
+  "interpretation": {
+    "source": "script_vs_context_benchmark/results/e2-n1000-direct-m4-2026-09-29T16-30-10-326Z/interpretation.response.raw.json",
+    "selection": "Provider response identifiers and usage; other fields omitted",
+    "record": {
+      "id": "resp_08fe271729522416006abbe89ad6f087d29dbed253dfe83f0f",
+      "model": "gpt-5.6-terra",
+      "status": "completed",
+      "created_at": 1790699674,
+      "usage": {
+        "input_tokens": 2788,
+        "input_tokens_details": {
+          "cache_write_tokens": 2785,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1058,
+        "output_tokens_details": {
+          "reasoning_tokens": 848
+        },
+        "total_tokens": 3846
+      }
+    },
+    "usage": {
+      "input_tokens": 2788,
+      "input_tokens_details": {
+        "cache_write_tokens": 2785,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1058,
+      "output_tokens_details": {
+        "reasoning_tokens": 848
+      },
+      "total_tokens": 3846
+    }
+  }
+}

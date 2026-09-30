@@ -1,0 +1,20 @@
+[
+  {
+    "role": "developer",
+    "content": [
+      {
+        "type": "input_text",
+        "text": "You are the generated-script condition of E2. Write a pure CommonJS module with a named function transform(rows). The final export statement must be exactly: module.exports = { transform }; Do not export a function directly.\n\nEach input row has raw_id, report_year, track_type, damage_text, injured_text, and hazmat_released_text. transform(rows) must return {records, summary}; records must preserve source order and contain raw_id, report_year, track_type, severity_class, valid_damage_usd, valid_injured, and valid_hazmat.\n\nDo not inspect or request source rows: the host will pass them only to the generated function after it is written. The source must include all parsing and severity logic; no require/import, filesystem, network, process/global access, or dynamic code generation is permitted.\n\nValid damage is a string matching ^[0-9,]+$; remove commas and parse as a nonnegative integer. Otherwise damage is null.\nValid injury and hazmat values are strings matching ^[0-9]+$; parse as nonnegative integers. Otherwise each is null.\nSeverity is unknown if damage, injury, or hazmat is null.\nOtherwise severity is critical when injury > 0, hazmat > 0, or damage >= 1000000; high when damage >= 100000; medium when damage >= 10000; low otherwise.\nPreserve raw_id, report_year, and track_type exactly from each row."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "input_text",
+        "text": "Write the complete transform module now."
+      }
+    ]
+  }
+]

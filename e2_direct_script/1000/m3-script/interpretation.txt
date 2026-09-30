@@ -1,0 +1,5 @@
+- Yard–medium was the largest displayed group, with 92 rows in 2019.
+- Main–critical had the largest displayed damage total: $35,472,018 in 2020.
+- Nonzero injury and hazmat values appear only in selected critical groups in this aggregate.
+
+Limitations: These are descriptive results for the 1,000 stored rows selected by raw_id, not unique incidents or a population estimate. Severity follows prescribed parsing and thresholds and is not an independently validated safety assessment. No exposure adjustment or causal interpretation is supported.

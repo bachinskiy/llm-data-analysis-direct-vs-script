@@ -1,0 +1,74 @@
+[
+  {
+    "run": "250/m2-direct",
+    "original_result": "script_vs_context_benchmark/results/e2-n250-direct-row-transform-m2",
+    "prompt": "verbatim prompt not recovered; task.txt is editorial summary",
+    "original_result_sha256": "4fa0fc89af8219cabd9bd06b67e1e5eeff8433720da6ce5a1887391b4a2cecc3"
+  },
+  {
+    "run": "250/m2-script",
+    "original_result": "script_vs_context_benchmark/results/e2-n250-generated-transform-m2-2026-09-28T09-36-45Z",
+    "prompt": "verbatim prompt not recovered; task.txt is editorial summary",
+    "original_result_sha256": "4fa0fc89af8219cabd9bd06b67e1e5eeff8433720da6ce5a1887391b4a2cecc3"
+  },
+  {
+    "run": "250/m3-direct",
+    "original_result": "script_vs_context_benchmark/results/e2-n250-direct-row-transform-m3",
+    "prompt": "saved analytical prompt; personal paths replaced",
+    "original_result_sha256": "4fa0fc89af8219cabd9bd06b67e1e5eeff8433720da6ce5a1887391b4a2cecc3"
+  },
+  {
+    "run": "250/m3-script",
+    "original_result": "script_vs_context_benchmark/results/e2-n250-generated-transform-m3-2026-09-28T09-37-53-895Z",
+    "prompt": "verbatim prompt not recovered; task.txt is editorial summary",
+    "original_result_sha256": "4fa0fc89af8219cabd9bd06b67e1e5eeff8433720da6ce5a1887391b4a2cecc3"
+  },
+  {
+    "run": "250/m4-direct",
+    "original_result": "script_vs_context_benchmark/results/e2-n250-direct-m4-2026-09-28T09-57-03-171Z",
+    "prompt": "verbatim prompt not recovered; task.txt is editorial summary",
+    "original_result_sha256": "4fa0fc89af8219cabd9bd06b67e1e5eeff8433720da6ce5a1887391b4a2cecc3"
+  },
+  {
+    "run": "250/m4-script",
+    "original_result": "script_vs_context_benchmark/results/e2-n250-script-m4-2026-09-28T09-59-34-380Z",
+    "prompt": "verbatim prompt not recovered; task.txt is editorial summary",
+    "original_result_sha256": "4fa0fc89af8219cabd9bd06b67e1e5eeff8433720da6ce5a1887391b4a2cecc3"
+  },
+  {
+    "run": "1000/m2-direct",
+    "original_result": "script_vs_context_benchmark/results/e2-n1000-direct-m2-01a0ee01-7ce1-7b80-98a6-94bc5a3dfac0",
+    "prompt": "saved analytical prompt; personal paths replaced",
+    "original_result_sha256": "1afe980635ab1cdf56f3b3955ab02be03015033f89a5e51d42b15a1976eff5dc"
+  },
+  {
+    "run": "1000/m3-direct",
+    "original_result": "script_vs_context_benchmark/results/e2-n1000-direct-m3-2026-09-29T16-32-03-477Z",
+    "prompt": "saved analytical prompt; personal paths replaced",
+    "original_result_sha256": "1afe980635ab1cdf56f3b3955ab02be03015033f89a5e51d42b15a1976eff5dc"
+  },
+  {
+    "run": "1000/m4-direct",
+    "original_result": "script_vs_context_benchmark/results/e2-n1000-direct-m4-2026-09-29T16-30-10-326Z",
+    "prompt": "saved analytical prompt; personal paths replaced",
+    "original_result_sha256": "1afe980635ab1cdf56f3b3955ab02be03015033f89a5e51d42b15a1976eff5dc"
+  },
+  {
+    "run": "1000/m3-script",
+    "original_result": "script_vs_context_benchmark/results/e2-n1000-generated-transform-m3-2026-09-29T16-29-07-222Z",
+    "prompt": "verbatim prompt not recovered; task.txt is editorial summary",
+    "original_result_sha256": "1afe980635ab1cdf56f3b3955ab02be03015033f89a5e51d42b15a1976eff5dc"
+  },
+  {
+    "run": "1000/m2-script",
+    "original_result": "script_vs_context_benchmark/results/e2-n1000-script-m2-01a0ee01-91b8-7d23-be7b-5898be1aa143",
+    "prompt": "saved analytical prompt; personal paths replaced",
+    "original_result_sha256": "1afe980635ab1cdf56f3b3955ab02be03015033f89a5e51d42b15a1976eff5dc"
+  },
+  {
+    "run": "1000/m4-script",
+    "original_result": "script_vs_context_benchmark/results/e2-n1000-script-m4-2026-09-29T16-32-26-475Z",
+    "prompt": "saved analytical prompt; personal paths replaced",
+    "original_result_sha256": "1afe980635ab1cdf56f3b3955ab02be03015033f89a5e51d42b15a1976eff5dc"
+  }
+]

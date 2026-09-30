@@ -1,0 +1,36 @@
+{
+  "transformation": {
+    "source": "script_vs_context_benchmark/results/e2-n250-script-m4-2026-09-28T09-59-34-380Z/generation_response.json",
+    "selection": "Provider response identifiers and usage; other fields omitted",
+    "record": {
+      "id": "resp_0f9301a1f6f3c7e4006aba3a86105487d298b66df97c1ce1d9",
+      "model": "gpt-5.6-terra",
+      "status": "completed",
+      "created_at": 1790589574,
+      "usage": {
+        "input_tokens": 353,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 814,
+        "output_tokens_details": {
+          "reasoning_tokens": 250
+        },
+        "total_tokens": 1167
+      }
+    },
+    "usage": {
+      "input_tokens": 353,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 814,
+      "output_tokens_details": {
+        "reasoning_tokens": 250
+      },
+      "total_tokens": 1167
+    }
+  }
+}

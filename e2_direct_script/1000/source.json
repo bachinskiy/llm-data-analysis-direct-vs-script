@@ -1,0 +1,7 @@
+{
+  "source": "https://www.kaggle.com/datasets/chrico03/railroad-accident-and-incident-data",
+  "selection_sql": "SELECT JSON_OBJECT(\n    'raw_id', raw_id,\n    'report_year', `Report Year`,\n    'track_type', `Track Type`,\n    'damage_text', `Total Damage Cost`,\n    'injured_text', `Total Persons Injured`,\n    'hazmat_released_text', `Hazmat Released Cars`\n  ) AS row_json\n  FROM scientific_article.fra_reports_raw\n  WHERE `Report Year` IN ('2018','2019','2020','2021','2022')\n    AND `Accident Type` = 'Derailment'\n  ORDER BY raw_id ASC\n  LIMIT 1000;",
+  "rows": 1000,
+  "archive_source": "script_vs_context_benchmark\\source_artifacts\\e2-n1000-v1",
+  "note": "Frozen factual subset from historical import, not a new Kaggle download. N250 is the first half of earlier N500 source."
+}

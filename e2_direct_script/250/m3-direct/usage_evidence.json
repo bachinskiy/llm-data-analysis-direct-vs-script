@@ -1,0 +1,23 @@
+{
+  "transformation": {
+    "source": "drafts/update_evidence_2026-09-28/usage_extracts/e2-m3-direct.json",
+    "selection": "Archived CLI usage record or saved metrics; not full log",
+    "record": {
+      "type": "turn.completed",
+      "usage": {
+        "input_tokens": 43748,
+        "cached_input_tokens": 16128,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5910,
+        "reasoning_output_tokens": 1443
+      }
+    },
+    "usage": {
+      "input_tokens": 43748,
+      "cached_input_tokens": 16128,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 5910,
+      "reasoning_output_tokens": 1443
+    }
+  }
+}

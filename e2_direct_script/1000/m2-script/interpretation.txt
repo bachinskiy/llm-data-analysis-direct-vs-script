@@ -1,0 +1,7 @@
+- Main-track critical rows have the largest displayed damage totals, peaking at $35.47M across 13 rows in 2020; 2021 shows $31.30M across 16 rows.
+
+- Yard medium rows are consistently numerous in each displayed year, ranging from 65 (2022) to 92 (2019).
+
+- Recorded injuries and hazmat releases appear only in selected critical groups; for example, Main critical has 3 injuries and 4 hazmat releases in 2021.
+
+Limitations: These describe only the 1,000 stored rows selected by ascending raw ID. Severity follows prescribed parsing and thresholds, not an independently validated safety assessment. The aggregate does not support causal, population-wide, unique-incident, or exposure-adjusted conclusions.

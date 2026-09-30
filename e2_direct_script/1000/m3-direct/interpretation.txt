@@ -1,0 +1,7 @@
+- Yard–medium groups had the largest row counts in several years, including 92 rows in 2019 and 88 in 2018.
+
+- Main–critical groups carried the largest listed damage totals, peaking at $35,472,018 across 13 rows in 2020; the corresponding 2021 group had 16 rows and $31,302,804.
+
+- Valid injured counts were sparse: 3 in Main–critical (2021), 2 in Siding–critical (2019), and 1 in several other critical groups. The largest listed valid hazmat count was 4 in Main–critical (2021).
+
+Limitations: This is a 1,000-row raw-ID-ascending subset, not a population estimate or unique-incident count. Severity follows prescribed parsing and thresholds and is not an independently validated safety assessment. Valid-field sums may not represent unrecorded or invalid values, and no exposure adjustment or causal inference is supported.

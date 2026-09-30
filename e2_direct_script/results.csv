@@ -1,0 +1,13 @@
+rows,method,mode,boundary,tokens,normalized_usd,row_mismatches
+250,M2,direct,transformation,76997,0.1203456,0
+250,M2,script,transformation,31859,0.0366616,0
+250,M3,direct,transformation,49658,0.1293856,0
+250,M3,script,transformation,17016,0.050782,0
+250,M4,direct,transformation,21734,0.1453976,0
+250,M4,script,transformation,1167,0.010474,0
+1000,M2,direct,transformation+interpretation,368086,0.4234396,0
+1000,M2,script,transformation+interpretation,70156,0.0620704,0
+1000,M3,direct,transformation+interpretation,220574,0.383992,0
+1000,M3,script,transformation+interpretation,37532,0.0692964,0
+1000,M4,direct,transformation+interpretation,59985,0.3252915,0
+1000,M4,script,transformation+interpretation,4121,0.013029,0

@@ -1,0 +1,50 @@
+{
+  "transformation": {
+    "source": "drafts/update_evidence_2026-09-28/usage_extracts/01a0e75f-b6ed-76b1-b29d-3eaeecfd43de.json",
+    "selection": "token_usage_record; turn_token_usage is the turn total, not last-response usage",
+    "record": {
+      "timestamp": "2026-09-28T09:37:08.479Z",
+      "ordinal": 14,
+      "type": "token_usage_record",
+      "payload": {
+        "thread_id": "01a0e75f-b6ed-76b1-b29d-3eaeecfd43de",
+        "turn_id": "01a0e75f-ba24-7db0-872c-679e7d612411",
+        "session_id": "01a0e75f-b6ed-76b1-b29d-3eaeecfd43de",
+        "root_turn_id": "01a0e75f-ba24-7db0-872c-679e7d612411",
+        "response_id": "resp_09bf4f52d1dd1977016aba352e385087d2a99a04ee756506d4",
+        "usage": {
+          "input_tokens": 30740,
+          "cached_input_tokens": 21248,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1119,
+          "reasoning_output_tokens": 432,
+          "total_tokens": 31859
+        },
+        "turn_token_usage": {
+          "input_tokens": 30740,
+          "cached_input_tokens": 21248,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1119,
+          "reasoning_output_tokens": 432,
+          "total_tokens": 31859
+        },
+        "thread_token_usage": {
+          "input_tokens": 30740,
+          "cached_input_tokens": 21248,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1119,
+          "reasoning_output_tokens": 432,
+          "total_tokens": 31859
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 30740,
+      "cached_input_tokens": 21248,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1119,
+      "reasoning_output_tokens": 432,
+      "total_tokens": 31859
+    }
+  }
+}

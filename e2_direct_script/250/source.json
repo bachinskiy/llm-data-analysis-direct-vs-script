@@ -1,0 +1,7 @@
+{
+  "source": "https://www.kaggle.com/datasets/chrico03/railroad-accident-and-incident-data",
+  "selection_sql": null,
+  "rows": 250,
+  "archive_source": "script_vs_context_benchmark\\source_artifacts\\e2-n250-v2",
+  "note": "Frozen factual subset from historical import, not a new Kaggle download. N250 is the first half of earlier N500 source."
+}

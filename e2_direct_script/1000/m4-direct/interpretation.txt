@@ -1,0 +1,5 @@
+- Yard/medium was the largest single year–track–severity group in each displayed year: 88 rows (2018), 92 (2019), 75 (2020), 67 (2021), and 65 (2022).
+- Main/critical groups had the highest listed damage sums each year, ranging from $10,585,690 (2022) to $35,472,018 (2020).
+- Every displayed nonzero valid injured or hazmat sum occurs in a critical group; the largest shown are 3 injured and 4 hazmat in Main/critical during 2021.
+
+**Limitations:** This is a raw_id-ascending selection of 1,000 stored report rows, not a population or exposure-based dataset; rows should not be treated as unique incidents. Damage, injury, and hazmat fields are reported as valid sums in the aggregate, with no assessment of completeness or reporting consistency. Severity reflects prescribed parsing and thresholds, not an independently validated safety assessment.

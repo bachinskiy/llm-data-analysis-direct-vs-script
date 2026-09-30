@@ -1,0 +1,13 @@
+TASK DESCRIPTION (editorial summary, not a recovered verbatim prompt)
+For every input row produce raw_id, report_year, track_type, severity_class,
+valid_damage_usd, valid_injured, valid_hazmat, preserving row order.
+Damage: require string matching ^[0-9,]+$ BEFORE removing commas, then parse.
+Injured/hazmat: require string matching ^[0-9]+$, then parse. Otherwise null.
+Severity: unknown if any parsed value is null; otherwise critical if injured>0
+OR hazmat>0 OR damage>=1000000; high if damage>=100000; medium if damage>=10000;
+low otherwise. Hazmat input is Hazmat Released Cars, not count of spill events.
+Direct: model processes rows and returns them without transformation scripts.
+Script: model writes transform(rows); runtime executes it on the same source.
+Null is an empty CSV cell. Labels are experimental, not validated safety ratings.
+
+Boundary: transformation plus <=200-word interpretation of the common validated aggregate.
