@@ -1,0 +1,150 @@
+{
+  "protocol": "E2-severity-source-v1",
+  "created_at": "2026-09-29T16:27:52.860Z",
+  "row_count": 1000,
+  "source_rows_sha256": "54aed3ba459d3f234032c697711b544a482554c28cdc31487931aa14300ee94f",
+  "sql": "SELECT JSON_OBJECT(\n    'raw_id', raw_id,\n    'report_year', `Report Year`,\n    'track_type', `Track Type`,\n    'damage_text', `Total Damage Cost`,\n    'injured_text', `Total Persons Injured`,\n    'hazmat_released_text', `Hazmat Released Cars`\n  ) AS row_json\n  FROM scientific_article.fra_reports_raw\n  WHERE `Report Year` IN ('2018','2019','2020','2021','2022')\n    AND `Accident Type` = 'Derailment'\n  ORDER BY raw_id ASC\n  LIMIT 1000;",
+  "page_size": 50,
+  "pages": [
+    {
+      "file": "page-001.jsonl",
+      "row_count": 50,
+      "first_raw_id": 32,
+      "last_raw_id": 250,
+      "sha256": "4ee389f87d9026485dd42162bec51e600cd4558279a85da317bc40f649e0f503"
+    },
+    {
+      "file": "page-002.jsonl",
+      "row_count": 50,
+      "first_raw_id": 251,
+      "last_raw_id": 459,
+      "sha256": "6c6273a17d87e5b5c601a669b53afe944fb287bb77432be87f90bc8c5f70d5a8"
+    },
+    {
+      "file": "page-003.jsonl",
+      "row_count": 50,
+      "first_raw_id": 464,
+      "last_raw_id": 750,
+      "sha256": "a069d9f2e0ff776bc59ed425a4cdf8fe3f7f7ad7db44296a5ea328731693e3c6"
+    },
+    {
+      "file": "page-004.jsonl",
+      "row_count": 50,
+      "first_raw_id": 753,
+      "last_raw_id": 995,
+      "sha256": "93b33893bc8e464b715fdc52805e649567f30dd7724e25d24ed5ad3835acb636"
+    },
+    {
+      "file": "page-005.jsonl",
+      "row_count": 50,
+      "first_raw_id": 996,
+      "last_raw_id": 1255,
+      "sha256": "556e6934c0c34314ef9ee6a60de702664ab38533d31cebb1fe425c6f1284c56c"
+    },
+    {
+      "file": "page-006.jsonl",
+      "row_count": 50,
+      "first_raw_id": 1256,
+      "last_raw_id": 1491,
+      "sha256": "0a7f3d5df805a793639ea26910371825c7a6c2e35c90dc6adb25e103fd4e2746"
+    },
+    {
+      "file": "page-007.jsonl",
+      "row_count": 50,
+      "first_raw_id": 1493,
+      "last_raw_id": 1586,
+      "sha256": "8eb3994cdb6bfe48c6d1f2c74ead8b675dc7a938707948e4a309544cca3b36a6"
+    },
+    {
+      "file": "page-008.jsonl",
+      "row_count": 50,
+      "first_raw_id": 1587,
+      "last_raw_id": 1669,
+      "sha256": "5f8e80c99bf480bb1057b28736beeea6dacf7da0d07332c73db34c6e0de9e95e"
+    },
+    {
+      "file": "page-009.jsonl",
+      "row_count": 50,
+      "first_raw_id": 1670,
+      "last_raw_id": 1764,
+      "sha256": "5922297eef23ad8a6c8740a08dc56580fab99dae47559faff09b1dcf7bdef780"
+    },
+    {
+      "file": "page-010.jsonl",
+      "row_count": 50,
+      "first_raw_id": 1768,
+      "last_raw_id": 1941,
+      "sha256": "32c9ca9429048905fb512b298d27db3938d33704d80e021e045598a7354d06dc"
+    },
+    {
+      "file": "page-011.jsonl",
+      "row_count": 50,
+      "first_raw_id": 1943,
+      "last_raw_id": 2121,
+      "sha256": "62159f442c6b6fd6dd3bcd365ca4c7ff33c9c63f870cd4666ecb0b3bbdcd751a"
+    },
+    {
+      "file": "page-012.jsonl",
+      "row_count": 50,
+      "first_raw_id": 2130,
+      "last_raw_id": 2364,
+      "sha256": "5ecf9063fe04233f72636609e73d973319ad7a68149cca0292ea874d68608e5a"
+    },
+    {
+      "file": "page-013.jsonl",
+      "row_count": 50,
+      "first_raw_id": 2368,
+      "last_raw_id": 2656,
+      "sha256": "6bf6876c1443623666e1b9728f2943ce4f978c2af04f0c56dd9b0d0e5e76afa0"
+    },
+    {
+      "file": "page-014.jsonl",
+      "row_count": 50,
+      "first_raw_id": 2657,
+      "last_raw_id": 2783,
+      "sha256": "3ba0fac1cfde86b1927ad70a9dea9a6d326c63e1e61697c9cdaf28cc319fd26a"
+    },
+    {
+      "file": "page-015.jsonl",
+      "row_count": 50,
+      "first_raw_id": 2784,
+      "last_raw_id": 3055,
+      "sha256": "87e80625bbdc58f259931f3175648d6b524324b7034a0125aed980a02a62620f"
+    },
+    {
+      "file": "page-016.jsonl",
+      "row_count": 50,
+      "first_raw_id": 3058,
+      "last_raw_id": 3246,
+      "sha256": "c631f9c46e1b0677124bc3786d3132a95bd9118d781e9c1221afe1dc31d90c99"
+    },
+    {
+      "file": "page-017.jsonl",
+      "row_count": 50,
+      "first_raw_id": 3250,
+      "last_raw_id": 3565,
+      "sha256": "60430f751775e2b4eca2244ff3a4c9ef828d5532fa79a68d1a70c2611653a882"
+    },
+    {
+      "file": "page-018.jsonl",
+      "row_count": 50,
+      "first_raw_id": 3566,
+      "last_raw_id": 3801,
+      "sha256": "35324afa6a96bedfd9f3a86f07acb16e9dfe4f0dc0748aad799db2b186cb23e4"
+    },
+    {
+      "file": "page-019.jsonl",
+      "row_count": 50,
+      "first_raw_id": 3802,
+      "last_raw_id": 4073,
+      "sha256": "f4fd9079350a905a3855f9f6e8f816527e430fb5061b717114dc76aeb003fe77"
+    },
+    {
+      "file": "page-020.jsonl",
+      "row_count": 50,
+      "first_raw_id": 4115,
+      "last_raw_id": 4421,
+      "sha256": "e87aa6b348204d8e2f833559cae11dace2bcb1455cec5cabc246f493f85ccd2e"
+    }
+  ]
+}

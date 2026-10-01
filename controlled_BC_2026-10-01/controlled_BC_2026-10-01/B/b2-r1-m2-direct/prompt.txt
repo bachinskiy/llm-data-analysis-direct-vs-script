@@ -1,0 +1,15 @@
+This is isolated Series B v2 run b2-r1-m2-direct. Do not use prior chat context, historical E2 results, audits, knowledge bundles, database, web, or files outside the declared source. Do not create, edit, or delete files.
+
+Read ONLY the manifest and every listed JSONL page in:
+<PROJECT>\script_vs_context_benchmark\source_artifacts\e2-n1000-v1
+
+Transform all 1,000 rows yourself. Preserve source order and return exactly one CSV row per input row with header:
+raw_id,report_year,track_type,severity_class,valid_damage_usd,valid_injured,valid_hazmat
+
+Rules:
+- Damage is valid only when damage_text is exactly a nonnegative integer written as digits or properly comma-grouped thousands: 0, 1234, 1,234, 1,234,567. Otherwise valid_damage_usd is empty.
+- injured_text and hazmat_released_text are valid only when each is exactly a nonnegative digit-only integer, with no whitespace, comma, sign, or decimal point. Otherwise the respective output cell is empty.
+- severity_class is unknown if any of three valid values is empty; otherwise critical if valid_injured &gt; 0, valid_hazmat &gt; 0, or valid_damage_usd &gt;= 1000000; high if damage &gt;= 100000; medium if damage &gt;= 10000; otherwise low.
+- Do not deduplicate, normalize, or infer values.
+
+Return only one fenced csv block. It must contain the header and all 1,000 transformed rows, no prose, abbreviations, ellipses, code, or summary.

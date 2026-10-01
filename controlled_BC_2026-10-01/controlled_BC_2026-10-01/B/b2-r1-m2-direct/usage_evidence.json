@@ -1,0 +1,74 @@
+{
+  "source_filename": "rollout-2026-09-30T20-37-43-01a0f364-ca2d-7a42-b8c4-e4a850cdc44e.jsonl",
+  "context": {
+    "originator": "Codex Desktop",
+    "cli_version": "0.158.0-alpha.2.1",
+    "thread_source": "agent_created_thread",
+    "model_provider": "openai",
+    "model": "gpt-5.6-terra",
+    "effort": "high"
+  },
+  "events": [
+    {
+      "timestamp": "2026-09-30T17:37:52.175Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_091e09e0e180307d016abd48eb24f887d2b61539d15106aeb4",
+      "usage": {
+        "input_tokens": 31309,
+        "cached_input_tokens": 20224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 234,
+        "reasoning_output_tokens": 89,
+        "total_tokens": 31543
+      }
+    },
+    {
+      "timestamp": "2026-09-30T17:38:24.891Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_091e09e0e180307d016abd48f7621487d2b314cca248eb9399",
+      "usage": {
+        "input_tokens": 33539,
+        "cached_input_tokens": 30464,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1380,
+        "reasoning_output_tokens": 719,
+        "total_tokens": 34919
+      }
+    },
+    {
+      "timestamp": "2026-09-30T17:39:04.530Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_091e09e0e180307d016abd491f04bc87d281c61600a33f1915",
+      "usage": {
+        "input_tokens": 46013,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1363,
+        "reasoning_output_tokens": 693,
+        "total_tokens": 47376
+      }
+    },
+    {
+      "timestamp": "2026-09-30T17:44:42.035Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_091e09e0e180307d016abd49417fe887d2bb80b7cd41677814",
+      "usage": {
+        "input_tokens": 64271,
+        "cached_input_tokens": 45824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 18176,
+        "reasoning_output_tokens": 1294,
+        "total_tokens": 82447
+      }
+    }
+  ],
+  "normalized": {
+    "input_tokens": 175132,
+    "cached_input_tokens": 129024,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 21153,
+    "reasoning_output_tokens": 2795,
+    "total_tokens": 196285
+  },
+  "note": "Selected observable usage events from author-held logs; not provider-certified billing."
+}

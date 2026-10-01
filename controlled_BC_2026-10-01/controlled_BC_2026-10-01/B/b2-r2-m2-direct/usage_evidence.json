@@ -1,0 +1,61 @@
+{
+  "source_filename": "rollout-2026-09-30T21-52-33-01a0f3a9-49b1-7760-8e45-93ac6addead3.jsonl",
+  "context": {
+    "originator": "Codex Desktop",
+    "cli_version": "0.158.0-alpha.2.1",
+    "thread_source": "agent_created_thread",
+    "model_provider": "openai",
+    "model": "gpt-5.6-terra",
+    "effort": "high"
+  },
+  "events": [
+    {
+      "timestamp": "2026-09-30T18:52:40.376Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_094e571ee598e0a8016abd5a74460887d2a1da29a8b1d4ba09",
+      "usage": {
+        "input_tokens": 30972,
+        "cached_input_tokens": 21248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 188,
+        "reasoning_output_tokens": 75,
+        "total_tokens": 31160
+      }
+    },
+    {
+      "timestamp": "2026-09-30T18:53:12.092Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_094e571ee598e0a8016abd5a7f592487d2b7699186f8e8efb5",
+      "usage": {
+        "input_tokens": 33156,
+        "cached_input_tokens": 30464,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1321,
+        "reasoning_output_tokens": 721,
+        "total_tokens": 34477
+      }
+    },
+    {
+      "timestamp": "2026-09-30T18:58:38.006Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_094e571ee598e0a8016abd5aa08d1487d2ace65cb683763378",
+      "usage": {
+        "input_tokens": 51372,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 17620,
+        "reasoning_output_tokens": 738,
+        "total_tokens": 68992
+      }
+    }
+  ],
+  "normalized": {
+    "input_tokens": 115500,
+    "cached_input_tokens": 84224,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 19129,
+    "reasoning_output_tokens": 1534,
+    "total_tokens": 134629
+  },
+  "note": "Selected observable usage events from author-held logs; not provider-certified billing."
+}

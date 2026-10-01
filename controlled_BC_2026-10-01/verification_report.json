@@ -1,0 +1,175 @@
+{
+  "runs": [
+    {
+      "id": "b2-direct-m3-2026-09-30T18-18-57-723Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.3245204,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-direct-m3-2026-09-30T18-41-24-615Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.3683896,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-direct-m3-2026-09-30T19-01-35-753Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.30657,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-direct-m4-2026-09-30T18-13-39-627Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.6389505,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-direct-m4-2026-09-30T18-34-12-122Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.5714478,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-direct-m4-2026-09-30T19-24-30-689Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.5534718,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-r1-m2-direct",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.3718568,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-r1-m2-script",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.0333356,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-r2-m2-direct",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.3089448,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-r2-m2-script",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.0341756,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-r3-m2-direct",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.3036748,
+      "script_replayed": null
+    },
+    {
+      "id": "b2-r3-m2-script",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.0337436,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T17-48-41-714Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.04257,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T19-00-20-667Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.048966,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T19-17-11-570Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.042966,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T18-26-10-017Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.025784,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T18-51-15-862Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.026192,
+      "script_replayed": true
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T19-08-53-427Z",
+      "rows": 1000,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.026024,
+      "script_replayed": true
+    },
+    {
+      "id": "c-m2",
+      "rows": 215849,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.0357716,
+      "script_replayed": true
+    },
+    {
+      "id": "c-m3",
+      "rows": 215849,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.0171764,
+      "script_replayed": true
+    },
+    {
+      "id": "c-m4",
+      "rows": 215849,
+      "mismatches": 0,
+      "usage_verified": true,
+      "normalized_usd": 0.021276,
+      "script_replayed": true
+    }
+  ],
+  "saved_outputs_passed": 21,
+  "generated_programs_replayed": 12,
+  "scope": "Offline artifact and usage consistency; does not prove provider billing, universal correctness, or compliance with Direct restrictions. See protocol.md and tool traces."
+}

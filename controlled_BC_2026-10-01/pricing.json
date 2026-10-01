@@ -1,0 +1,12 @@
+{
+  "snapshot_date": "2026-09-18",
+  "currency": "USD",
+  "usd_per_million": {
+    "input": 2,
+    "cache_read": 0.2,
+    "cache_write": 2.5,
+    "output": 12
+  },
+  "source": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+  "meaning": "Fixed normalization rates, not invoices. Reasoning is included in output."
+}

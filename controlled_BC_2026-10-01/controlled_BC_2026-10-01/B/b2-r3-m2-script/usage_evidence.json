@@ -1,0 +1,35 @@
+{
+  "source_filename": "rollout-2026-09-30T22-30-15-01a0f3cb-d09b-7dd0-b354-a6ade6bbca65.jsonl",
+  "context": {
+    "originator": "Codex Desktop",
+    "cli_version": "0.158.0-alpha.2.1",
+    "thread_source": "agent_created_thread",
+    "model_provider": "openai",
+    "model": "gpt-5.6-terra",
+    "effort": "high"
+  },
+  "events": [
+    {
+      "timestamp": "2026-09-30T19:30:35.238Z",
+      "event_type": "token_usage_record",
+      "response_id": "resp_0549850c2e41e08c016abd634b34f087d2a4cfdec663efc44a",
+      "usage": {
+        "input_tokens": 30967,
+        "cached_input_tokens": 21248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 838,
+        "reasoning_output_tokens": 420,
+        "total_tokens": 31805
+      }
+    }
+  ],
+  "normalized": {
+    "input_tokens": 30967,
+    "cached_input_tokens": 21248,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 838,
+    "reasoning_output_tokens": 420,
+    "total_tokens": 31805
+  },
+  "note": "Selected observable usage events from author-held logs; not provider-certified billing."
+}

@@ -1,0 +1,18 @@
+{
+  "protocol": "Series-C-v1",
+  "source_rows": 215849,
+  "result_rows": 215849,
+  "chunk_size": 1000,
+  "source_sha256": "9e5d77f60ed55ce28f04038f8a7ad1e80d79de509773222f385be97d16d8b489",
+  "result_csv_sha256": "d8d38b764ed2557e10e65c9559f74913338fe8447f572b893f5336c414a5a5a5",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "severity_counts": {
+    "low": 66360,
+    "medium": 112099,
+    "high": 20238,
+    "critical": 17151,
+    "unknown": 1
+  },
+  "source_sql": "SELECT raw_id, `Report Year`, `Track Type`, `Total Damage Cost`, `Total Persons Injured`, `Hazmat Released Cars` FROM fra_reports_raw ORDER BY raw_id ASC"
+}

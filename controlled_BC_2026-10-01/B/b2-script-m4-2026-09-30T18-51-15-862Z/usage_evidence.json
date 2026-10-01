@@ -1,0 +1,35 @@
+{
+  "source_filename": "response.raw.json",
+  "context": {
+    "requested_model": "gpt-5.6-terra",
+    "returned_model": "gpt-5.6-terra",
+    "status": "completed"
+  },
+  "events": [
+    {
+      "event_type": "responses.usage",
+      "response_id": "resp_0c95dbd606988049006abd5a249e2487d2ab503f97a91711f0",
+      "usage": {
+        "input_tokens": 232,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2144,
+        "output_tokens_details": {
+          "reasoning_tokens": 1622
+        },
+        "total_tokens": 2376
+      }
+    }
+  ],
+  "normalized": {
+    "input_tokens": 232,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2144,
+    "reasoning_output_tokens": 1622,
+    "total_tokens": 2376
+  },
+  "note": "Selected observable usage events from author-held logs; not provider-certified billing."
+}

@@ -1,0 +1,28 @@
+{
+  "source_filename": "codex.jsonl",
+  "context": {
+    "model_recorded_in_metrics": "gpt-5.6-terra",
+    "reasoning_effort_recorded_in_metrics": "high"
+  },
+  "events": [
+    {
+      "event_type": "turn.completed",
+      "usage": {
+        "input_tokens": 69861,
+        "cached_input_tokens": 47360,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21008,
+        "reasoning_output_tokens": 2640
+      }
+    }
+  ],
+  "normalized": {
+    "input_tokens": 69861,
+    "cached_input_tokens": 47360,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 21008,
+    "reasoning_output_tokens": 2640,
+    "total_tokens": 90869
+  },
+  "note": "Selected observable usage events from author-held logs; not provider-certified billing."
+}

@@ -1,0 +1,636 @@
+{
+  "scope": "Post hoc synthetic contract diagnostic. Not included in model tokens, main sample accuracy, or trial counts. The natural-language prompts did not explicitly disallow leading zeros, whereas the historical reference did. Disagreement therefore exposes a contract ambiguity, not demonstrated damage to the retained real data.",
+  "runs": [
+    {
+      "id": "b2-r1-m2-script",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-r2-m2-script",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "0,123",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 123,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-r3-m2-script",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T17-48-41-714Z",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "0,123",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 123,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "01,000",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1000,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T19-00-20-667Z",
+      "tested": 20,
+      "differences": []
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T19-17-11-570Z",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "0,123",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 123,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "01,000",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1000,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T18-26-10-017Z",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T18-51-15-862Z",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T19-08-53-427Z",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "0,123",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 123,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "01,000",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1000,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "c-m2",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "c-m3",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "c-m4",
+      "tested": 20,
+      "differences": [
+        {
+          "input": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "001",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 9,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "0,123",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 10,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 123,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        },
+        {
+          "input": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "damage_text": "01,000",
+            "injured_text": "0",
+            "hazmat_released_text": "0"
+          },
+          "reference": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "unknown",
+            "valid_damage_usd": null,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          },
+          "script": {
+            "raw_id": 11,
+            "report_year": "2022",
+            "track_type": "Main",
+            "severity_class": "low",
+            "valid_damage_usd": 1000,
+            "valid_injured": 0,
+            "valid_hazmat": 0
+          }
+        }
+      ]
+    }
+  ]
+}

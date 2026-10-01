@@ -1,0 +1,79 @@
+[
+  {
+    "run": "b2-direct-m4-2026-09-30T17-49-33-599Z",
+    "reason": "missing saved result or metrics",
+    "files": [
+      "request.json"
+    ]
+  },
+  {
+    "run": "b2-direct-m4-2026-09-30T17-57-47-215Z",
+    "reason": "row mismatch",
+    "mismatched_rows": 908,
+    "sample_indices": [
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "usage": {
+      "input_tokens": 38710,
+      "cached_input_tokens": 38707,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 5583,
+      "reasoning_output_tokens": 1552,
+      "total_tokens": 44293
+    }
+  },
+  {
+    "run": "b2-direct-m4-2026-09-30T18-06-48-289Z",
+    "reason": "missing saved result or metrics",
+    "files": [
+      "failure.json",
+      "request.json"
+    ]
+  },
+  {
+    "run": "b2-direct-m4-2026-09-30T18-28-46-646Z",
+    "reason": "row mismatch",
+    "mismatched_rows": 1,
+    "sample_indices": [
+      816
+    ],
+    "usage": {
+      "input_tokens": 38712,
+      "cached_input_tokens": 38709,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 46253,
+      "reasoning_output_tokens": 1812,
+      "total_tokens": 84965
+    }
+  },
+  {
+    "run": "b2-direct-m4-2026-09-30T19-18-02-881Z",
+    "reason": "row mismatch",
+    "mismatched_rows": 1,
+    "sample_indices": [
+      816
+    ],
+    "usage": {
+      "input_tokens": 38712,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 38709,
+      "output_tokens": 45825,
+      "reasoning_output_tokens": 1380,
+      "total_tokens": 84537
+    }
+  },
+  {
+    "run": "b2-script-m3-2026-09-30T17-46-16-346Z",
+    "reason": "missing saved result or metrics",
+    "files": [
+      "codex.jsonl",
+      "generated_transform.js",
+      "model_output.json",
+      "prompt.txt"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": "high",
+  "usage": {
+    "input_tokens": 184952,
+    "cached_input_tokens": 151808,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 22645,
+    "reasoning_output_tokens": 2303,
+    "total_tokens": 207597
+  },
+  "normalized_usd": 0.3683896,
+  "accounting": "selected successful execution only; not cost-to-success or subscription billing",
+  "no_cache_usd": 0.641644
+}
