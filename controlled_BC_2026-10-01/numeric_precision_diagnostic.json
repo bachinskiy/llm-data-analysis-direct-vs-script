@@ -1,0 +1,81 @@
+{
+  "scope": "Post hoc JavaScript Number precision diagnostic. The historical contract did not specify a maximum integer range. This test is excluded from model trials, token accounting, and claims about the retained FRA input.",
+  "case_file": "numeric_precision_cases.jsonl",
+  "safe_integer_max": 9007199254740991,
+  "programs_tested": 12,
+  "programs_with_exact_integer_output": 0,
+  "runs": [
+    {
+      "id": "b2-r1-m2-script",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-r2-m2-script",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-r3-m2-script",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T17-48-41-714Z",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T19-00-20-667Z",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-script-m3-2026-09-30T19-17-11-570Z",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T18-26-10-017Z",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T18-51-15-862Z",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "b2-script-m4-2026-09-30T19-08-53-427Z",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "c-m2",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "c-m3",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    },
+    {
+      "id": "c-m4",
+      "expected_valid_damage_usd": 9007199254740993,
+      "actual_valid_damage_usd": 9007199254740992,
+      "matches_exact_integer": false
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 import argparse
 import csv
 import gzip
+import hashlib
 import io
 import json
 import re
@@ -15,6 +16,12 @@ FIELDS=['raw_id','report_year','track_type','severity_class','valid_damage_usd',
 COUNTERS=['input_tokens','cached_input_tokens','cache_write_input_tokens','output_tokens','reasoning_output_tokens','total_tokens']
 
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+
+def sha256(path):
+    digest=hashlib.sha256()
+    with path.open('rb') as stream:
+        for block in iter(lambda:stream.read(1024*1024),b''):digest.update(block)
+    return digest.hexdigest()
 
 def damage(s):
     if not isinstance(s,str) or not s:return None
@@ -56,18 +63,17 @@ def normalize(evidence):
     if not out['total_tokens']:out['total_tokens']=out['input_tokens']+out['output_tokens']
     return out
 
+def source_from_model_output(folder):
+    text=(folder/'model_output.txt').read_text(encoding='utf-8-sig').strip()
+    if text.startswith('{'):return json.loads(text)['source_code']
+    match=re.search(r'```(?:javascript|js)\s*\n([\s\S]*?)```',text)
+    assert match,folder
+    return match.group(1)
+
 def check_model_output(folder, actual):
     text=(folder/'model_output.txt').read_text(encoding='utf-8-sig').strip()
     if (folder/'generated.js').exists():
-        if text.startswith('{'):source=json.loads(text)['source_code']
-        else:
-            match=re.search(r'```(?:javascript|js)\s*\n([\s\S]*?)```',text)
-            assert match,folder
-            source=match.group(1)
-        saved=(folder/'generated.js').read_text(encoding='utf-8-sig')
-        # Historical M2 exports collapsed formatting whitespace; replay checks behavior.
-        assert re.sub(r'\s+','',source)==re.sub(r'\s+','',saved),(folder,'code differs beyond whitespace')
-        return
+        return source_from_model_output(folder)
     if text.startswith('{'):
         assert json.loads(text)['records']==actual,(folder,'JSON answer differs from saved CSV')
     else:
@@ -78,6 +84,22 @@ def check_model_output(folder, actual):
             r['raw_id']=int(r['raw_id'])
             for k in FIELDS[4:]:r[k]=int(r[k].replace(',','')) if r[k] else None
         assert records==actual,(folder,'CSV answer differs from saved CSV')
+    return None
+
+def replay_module(node, input_path, module_path):
+    with tempfile.TemporaryDirectory() as tmp:
+        output=Path(tmp)/'replayed.jsonl'
+        subprocess.run([node,str(ROOT/'replay.js'),str(input_path),str(module_path),str(output)],check=True,capture_output=True,text=True,timeout=120)
+        with output.open(encoding='utf-8') as f:return [json.loads(l) for l in f if l.strip()]
+
+def check_b_selection_provenance(input_rows):
+    source=load(ROOT/'B'/'source_manifest.json')
+    path=ROOT/'B'/source['selection_provenance_file']
+    assert sha256(path)==source['selection_provenance_sha256'], 'Series B selection provenance checksum mismatch'
+    with path.open(encoding='utf-8-sig',newline='') as stream:rows=list(csv.DictReader(stream))
+    assert [row['raw_id'] for row in rows]==[str(row['raw_id']) for row in input_rows]
+    assert all(row['report_year']==str(input_row['report_year']) for row,input_row in zip(rows,input_rows))
+    assert all(row['accident_type']=='Derailment' for row in rows)
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--replay-scripts',action='store_true');parser.add_argument('--node',default='node');parser.add_argument('--report',default=None);args=parser.parse_args()
@@ -86,12 +108,13 @@ def main():
     for name in ['B','C']:
         with gzip.open(ROOT/name/'input.jsonl.gz','rt',encoding='utf-8') as f:expected[name]=[reference(json.loads(l)) for l in f if l.strip()]
     assert len(expected['B'])==1000 and len(expected['C'])==215849
+    check_b_selection_provenance([json.loads(line) for line in gzip.open(ROOT/'B'/'input.jsonl.gz','rt',encoding='utf-8') if line.strip()])
     findings=[]
     for run in registry:
         folder=ROOT/run['path'];series=run['series']
         actual=read_csv(ROOT/run['result'])
         assert actual==expected[series],run['id']+' saved CSV does not match independent reference'
-        check_model_output(folder,actual)
+        source=check_model_output(folder,actual)
         u=normalize(load(folder/'usage_evidence.json'));m=load(folder/'metrics.json')
         assert u==m['usage'],run['id']+' usage mismatch'
         assert u['input_tokens']+u['output_tokens']==u['total_tokens']
@@ -99,24 +122,32 @@ def main():
         assert 0<=h+w<=i
         cost=((i-h-w)*rates['input']+h*rates['cache_read']+w*rates['cache_write']+o*rates['output'])/1e6
         assert abs(cost-m['normalized_usd'])<1e-7,(run['id'],cost)
-        replay=None
+        replay=None;source_replay=None
         if args.replay_scripts and (folder/'generated.js').exists():
             with tempfile.TemporaryDirectory() as tmp:
-                path=Path(tmp)/'replayed.jsonl'
-                subprocess.run([args.node,str(ROOT/'replay.js'),str(ROOT/series/'input.jsonl.gz'),str(folder/'generated.js'),str(path)],check=True,capture_output=True,text=True,timeout=120)
-                with path.open(encoding='utf-8') as f:result=[json.loads(l) for l in f if l.strip()]
-                assert result==actual,run['id']+' replay mismatch'
-                replay=True
-        findings.append({'id':run['id'],'rows':len(actual),'mismatches':0,'usage_verified':True,'normalized_usd':round(cost,8),'script_replayed':replay})
-        print(run['id']+': rows/values/usage OK'+('; generated program OK' if replay else ''))
+                saved_result=replay_module(args.node,ROOT/series/'input.jsonl.gz',folder/'generated.js')
+                assert saved_result==actual,run['id']+' saved program replay mismatch'
+                source_path=Path(tmp)/'model_extracted.js'
+                source_path.write_text(source,encoding='utf-8')
+                source_result=replay_module(args.node,ROOT/series/'input.jsonl.gz',source_path)
+                assert source_result==actual,run['id']+' model-source replay mismatch'
+                replay=True;source_replay=True
+        findings.append({'id':run['id'],'rows':len(actual),'mismatches':0,'usage_verified':True,'normalized_usd':round(cost,8),'script_replayed':replay,'model_source_replayed':source_replay})
+        print(run['id']+': rows/values/usage OK'+('; saved and model-source programs OK' if replay else ''))
     with (ROOT/'results.csv').open(encoding='utf-8-sig',newline='') as f:
         summaries=list(csv.DictReader(f))
     assert len(summaries)==len(findings)
     for row,run in zip(summaries,registry):
         assert row['id']==run['id']
         m=load(ROOT/run['path']/'metrics.json')
+        assert row['series']==run['series'] and row['method']==run['method']
+        assert row['original_label']==run['original_label'] and row['observed_behavior']==run['observed_behavior']
+        assert int(row['rows'])==len(read_csv(ROOT/run['result']))
+        for key in COUNTERS:assert int(row[key])==m['usage'][key],(run['id'],key)
         assert abs(float(row['normalized_usd'])-m['normalized_usd'])<1e-7
-        assert int(row['total_tokens'])==m['usage']['total_tokens']
+        i,o=m['usage']['input_tokens'],m['usage']['output_tokens']
+        no_cache=(i*rates['input']+o*rates['output'])/1e6
+        assert abs(float(row['no_cache_usd'])-no_cache)<1e-7,run['id']
     report={'runs':findings,'saved_outputs_passed':len(findings),'generated_programs_replayed':sum(x['script_replayed'] is True for x in findings),'scope':'Offline artifact and usage consistency; does not prove provider billing, universal correctness, or compliance with Direct restrictions. See protocol.md and tool traces.'}
     if args.report:Path(args.report).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k!='runs'},indent=2))

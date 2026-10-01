@@ -3,6 +3,9 @@
   "created_at": "2026-09-29T16:27:52.860Z",
   "row_count": 1000,
   "source_rows_sha256": "54aed3ba459d3f234032c697711b544a482554c28cdc31487931aa14300ee94f",
+  "selection_provenance_file": "selection_provenance.csv",
+  "selection_provenance_sha256": "4a2501ccd1faa24dd70c276651e75fa13f0ef16726711d0b6f18af8771b45ca0",
+  "selection_provenance_scope": "The compact manifest records raw_id, stored Report Year, and stored Accident Type returned by the same read-only MariaDB selection query. It permits checking the declared filter against a compatible retained import with raw_id, but does not redistribute the full source table.",
   "sql": "SELECT JSON_OBJECT(\n    'raw_id', raw_id,\n    'report_year', `Report Year`,\n    'track_type', `Track Type`,\n    'damage_text', `Total Damage Cost`,\n    'injured_text', `Total Persons Injured`,\n    'hazmat_released_text', `Hazmat Released Cars`\n  ) AS row_json\n  FROM scientific_article.fra_reports_raw\n  WHERE `Report Year` IN ('2018','2019','2020','2021','2022')\n    AND `Accident Type` = 'Derailment'\n  ORDER BY raw_id ASC\n  LIMIT 1000;",
   "page_size": 50,
   "pages": [
