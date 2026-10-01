@@ -1,5 +1,0 @@
-This is B2 Direct M2, a fresh isolated benchmark run. Read only <PROJECT>\script_vs_context_benchmark\source_artifacts\e2-n1000-v1\manifest.json and exactly the JSONL page files listed in that manifest. Do not use prior chat context, remembered answers, local results, audits, knowledge, databases, web, or any other project files.
-
-Transform every one of the 1,000 frozen source rows yourself. Damage is valid only for digits or correctly comma-grouped thousands: 0, 1234, 1,234, 1,234,567. Injury and hazmat are valid only for nonnegative digit-only strings. Otherwise null. Severity is unknown if any valid value is null; otherwise critical if injury &gt; 0 or hazmat &gt; 0 or damage &gt;= 1000000; high if damage &gt;= 100000; medium if damage &gt;= 10000; otherwise low.
-
-Return only one fenced ```csv block. Its header must be exactly raw_id,report_year,track_type,severity_class,valid_damage_usd,valid_injured,valid_hazmat, followed by exactly 1,000 rows in input order. Empty numeric cells represent null.

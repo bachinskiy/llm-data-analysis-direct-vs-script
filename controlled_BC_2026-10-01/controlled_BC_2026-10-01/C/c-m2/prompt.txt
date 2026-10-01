@@ -1,7 +1,0 @@
-This is Series C M2 Script, a fresh isolated full-table feasibility run. Do not use prior chat context, remembered answers, local results, audits, knowledge, databases, web, or files other than this message. Do not read raw database rows.
-
-Return only one fenced ```javascript code block and nothing else. Write a pure CommonJS module that defines transform(rows) and ends exactly with module.exports = { transform }; no imports, filesystem, network, process/global, eval, or dynamic code.
-
-The host will invoke transform independently on ordered chunks from the complete local table. Each input row has raw_id, report_year, track_type, damage_text, injured_text, hazmat_released_text. Return {records, summary}; preserve input order. Every record must contain exactly raw_id, report_year, track_type, severity_class, valid_damage_usd, valid_injured, valid_hazmat.
-
-Rules: Damage is valid only for digit-only strings or correctly comma-grouped thousands: 0, 1234, 1,234, 1,234,567. Injury and hazmat are valid only for nonnegative digit-only strings. Otherwise null. Severity is unknown if any valid value is null; otherwise critical if injury &gt; 0 or hazmat &gt; 0 or damage &gt;= 1000000; high if damage &gt;= 100000; medium if damage &gt;= 10000; otherwise low.

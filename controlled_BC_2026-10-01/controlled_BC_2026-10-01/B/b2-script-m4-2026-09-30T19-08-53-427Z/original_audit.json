@@ -1,9 +1,0 @@
-{
-  "protocol": "E2-R-v2",
-  "source_rows": 1000,
-  "result_rows": 1000,
-  "source_ids_sha256": "953e5bc1453728210d36a269ade0c1cb0e7291fec64f8c28bcc6e6a43b3c8d02",
-  "result_ids_sha256": "953e5bc1453728210d36a269ade0c1cb0e7291fec64f8c28bcc6e6a43b3c8d02",
-  "mismatch_count": 0,
-  "mismatches": []
-}

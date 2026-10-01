@@ -1,7 +1,0 @@
-This is B2.1 Script M2, a fresh isolated benchmark run. Do not use any prior chat context, remembered answers, local results, audits, knowledge, databases, web, or files other than this message. Do not read source rows. Return only one fenced ```javascript code block and nothing else.
-
-Write a pure CommonJS module. It must define transform(rows), return {records, summary}, preserve order, and end exactly module.exports = { transform }; no imports, filesystem, network, process/global, eval, or dynamic code.
-
-Each input row has raw_id, report_year, track_type, damage_text, injured_text, hazmat_released_text. Every record must contain exactly raw_id, report_year, track_type, severity_class, valid_damage_usd, valid_injured, valid_hazmat.
-
-Rules: Damage is valid only for digits or correctly comma-grouped thousands: 0, 1234, 1,234, 1,234,567. Injury and hazmat are valid only for nonnegative digit-only strings. Otherwise null. Severity is unknown if any valid value is null; otherwise critical if injury &gt; 0 or hazmat &gt; 0 or damage &gt;= 1000000; high if damage &gt;= 100000; medium if damage &gt;= 10000; otherwise low.
