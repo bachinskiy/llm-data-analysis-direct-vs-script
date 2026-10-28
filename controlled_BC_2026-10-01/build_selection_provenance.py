@@ -9,6 +9,7 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+from verify import selection_provenance_sha256
 
 
 ROOT = Path(__file__).resolve().parent
@@ -56,7 +57,7 @@ def main():
         writer = csv.DictWriter(stream, fieldnames=["raw_id", "report_year", "accident_type"])
         writer.writeheader()
         writer.writerows(ordered)
-    print(json.dumps({"rows": len(selected), "source_sha256": sha256(args.source), "output_sha256": sha256(args.out)}))
+    print(json.dumps({"rows": len(selected), "source_sha256": sha256(args.source), "output_sha256": selection_provenance_sha256(args.out), "output_hash_rule": "sha256-crlf-to-lf-v1"}))
 
 
 if __name__ == "__main__":

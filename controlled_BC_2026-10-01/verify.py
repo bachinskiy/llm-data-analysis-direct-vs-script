@@ -23,6 +23,10 @@ def sha256(path):
         for block in iter(lambda:stream.read(1024*1024),b''):digest.update(block)
     return digest.hexdigest()
 
+def selection_provenance_sha256(path):
+    """Hash CSV bytes after CRLF-to-LF conversion; preserve all other bytes."""
+    return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+
 def damage(s):
     if not isinstance(s,str) or not s:return None
     if ',' not in s:
@@ -95,7 +99,8 @@ def replay_module(node, input_path, module_path):
 def check_b_selection_provenance(input_rows):
     source=load(ROOT/'B'/'source_manifest.json')
     path=ROOT/'B'/source['selection_provenance_file']
-    assert sha256(path)==source['selection_provenance_sha256'], 'Series B selection provenance checksum mismatch'
+    assert source['selection_provenance_hash_rule']=='sha256-crlf-to-lf-v1', 'Unsupported selection provenance hash rule'
+    assert selection_provenance_sha256(path)==source['selection_provenance_sha256'], 'Series B selection provenance checksum mismatch'
     with path.open(encoding='utf-8-sig',newline='') as stream:rows=list(csv.DictReader(stream))
     assert [row['raw_id'] for row in rows]==[str(row['raw_id']) for row in input_rows]
     assert all(row['report_year']==str(input_row['report_year']) for row,input_row in zip(rows,input_rows))
